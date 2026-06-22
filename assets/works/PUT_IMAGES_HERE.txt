@@ -1,0 +1,7 @@
+Put your artwork images in this folder.
+
+Example:
+assets/works/third-series-01.jpg
+
+Then edit:
+assets/js/works-data.js

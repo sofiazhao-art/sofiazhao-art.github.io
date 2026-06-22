@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Works | Sofia Zhao</title>
+  <meta name="description" content="Selected works by Sofia Zhao / Bing.B.Z.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Sofia Zhao</a>
+    <button class="nav-toggle" aria-label="Open navigation">Menu</button>
+    <nav class="site-nav">
+      <a href="works.html" aria-current="page">Works</a>
+      <a href="statement.html">Statement</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <p class="eyebrow">Works</p>
+      <h1>Selected paintings and studies</h1>
+      <p>
+        Edit <code>assets/js/works-data.js</code> to add, remove, reorder, or revise works.
+        Images live in <code>assets/works/</code>.
+      </p>
+    </section>
+
+    <section class="filters" aria-label="Work filters">
+      <button class="filter-button active" data-filter="all">All</button>
+      <button class="filter-button" data-filter="Third Series">Third Series</button>
+      <button class="filter-button" data-filter="Venus in the Cave">Venus in the Cave</button>
+      <button class="filter-button" data-filter="Cat Room">Cat Room</button>
+      <button class="filter-button" data-filter="Studies">Studies</button>
+    </section>
+
+    <section>
+      <div id="works-grid" class="work-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <dialog id="work-dialog" class="work-dialog">
+    <button class="dialog-close" aria-label="Close artwork view">×</button>
+    <img id="dialog-image" alt="">
+    <div class="dialog-caption">
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-meta"></p>
+      <p id="dialog-note"></p>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Sofia Zhao / Bing.B.Z</p>
+  </footer>
+
+  <script src="assets/js/works-data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
