@@ -54,7 +54,7 @@ window.WORKS = [
     medium: "Oil on canvas",
     size: "70 × 110 cm",
     series: "Venus in the Cave",
-    image: "",
+    image: "assets/works/venus-cave-02.heic",
     featured: false,
     note: ""
   }
