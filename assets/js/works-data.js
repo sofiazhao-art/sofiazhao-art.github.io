@@ -52,10 +52,10 @@ window.WORKS = [
     title: "Venus in the Cave",
     year: "2026",
     medium: "Oil on canvas",
-    size: "70 × 110 cm",
+    size: "40 × 50 cm",
     series: "Venus in the Cave",
     image: "assets/works/venus-cave-02.heic",
-    featured: false,
+    featured: true,
     note: ""
   }
 ];
