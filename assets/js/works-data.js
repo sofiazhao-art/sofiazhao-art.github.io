@@ -49,17 +49,7 @@ window.WORKS = [
     note: ""
   },
   {
-    title: "Venus in the Cave",
-    year: "2026",
-    medium: "Oil on canvas",
-    size: "40 × 50 cm",
-    series: "Venus in the Cave",
-    image: "assets/works/venus-cave-02.jpg",
-    featured: true,
-    note: ""
-  },
-  {
-    title: "Venus in the Cave",
+    title: "Untitled 01",
     year: "2026",
     medium: "Oil on canvas",
     size: "40 × 50 cm",
@@ -69,7 +59,17 @@ window.WORKS = [
     note: ""
   },
   {
-    title: "Venus in the Cave",
+    title: "Untitled 02",
+    year: "2026",
+    medium: "Oil on canvas",
+    size: "40 × 50 cm",
+    series: "Venus in the Cave",
+    image: "assets/works/venus-cave-02.jpg",
+    featured: true,
+    note: ""
+  },
+  {
+    title: "Untitled 03",
     year: "2026",
     medium: "Oil on canvas",
     size: "50 × 70 cm",
@@ -79,7 +79,7 @@ window.WORKS = [
     note: ""
   },
   {
-    title: "Venus in the Cave",
+    title: "Untitled 05",
     year: "2026",
     medium: "Oil on canvas",
     size: "60 × 80 cm",
