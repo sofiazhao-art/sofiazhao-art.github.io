@@ -59,6 +59,13 @@ function renderWorks(containerId, works) {
   works.forEach((work) => container.appendChild(createWorkCard(work)));
 }
 
+function updateSeriesIntro(filter) {
+  const introText = document.getElementById("series-intro-text");
+  if (!introText || !window.SERIES_INTROS) return;
+
+  introText.textContent = window.SERIES_INTROS[filter] || "";
+}
+
 function setupFilters() {
   const buttons = document.querySelectorAll(".filter-button");
   const grid = document.getElementById("works-grid");
