@@ -61,16 +61,14 @@ function renderWorks(containerId, works) {
 
 function updateSeriesIntro(filter) {
   const introText = document.getElementById("series-intro-text");
-
   if (!introText || !window.SERIES_INTROS) return;
 
-  introText.textContent = window.SERIES_INTROS[filter] || window.SERIES_INTROS.all || "";
+  introText.textContent = window.SERIES_INTROS[filter] || "";
 }
 
 function setupFilters() {
   const buttons = document.querySelectorAll(".filter-button");
   const grid = document.getElementById("works-grid");
-
   if (!buttons.length || !grid) return;
 
   buttons.forEach((button) => {
@@ -79,7 +77,6 @@ function setupFilters() {
       button.classList.add("active");
 
       const filter = button.dataset.filter;
-
       const filteredWorks = filter === "all"
         ? window.WORKS
         : window.WORKS.filter((work) => work.series === filter);
