@@ -81,9 +81,12 @@ function setupFilters() {
         ? window.WORKS
         : window.WORKS.filter((work) => work.series === filter);
 
+      updateSeriesIntro(filter);
       renderWorks("works-grid", filteredWorks);
     });
   });
+
+  updateSeriesIntro("all");
 }
 
 function openWorkDialog(work) {
