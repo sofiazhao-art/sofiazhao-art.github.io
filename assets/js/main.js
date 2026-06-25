@@ -2,14 +2,6 @@ function workMeta(work) {
   return [work.year, work.medium, work.size].filter(Boolean).join(" · ");
 }
 
-function updateSeriesIntro(filter) {
-  const introText = document.getElementById("series-intro-text");
-
-  if (!introText || !window.SERIES_INTROS) return;
-
-  introText.textContent = window.SERIES_INTROS[filter] || window.SERIES_INTROS.all || "";
-}
-
 function createWorkCard(work) {
   const article = document.createElement("article");
   article.className = "work-card";
@@ -63,19 +55,14 @@ function createWorkCard(work) {
 function renderWorks(containerId, works) {
   const container = document.getElementById(containerId);
   if (!container) return;
-
   container.innerHTML = "";
-
-  works.forEach((work) => {
-    container.appendChild(createWorkCard(work));
-  });
+  works.forEach((work) => container.appendChild(createWorkCard(work)));
 }
 
 function setupFilters() {
   const buttons = document.querySelectorAll(".filter-button");
   const grid = document.getElementById("works-grid");
-
-  if (!buttons.length || !grid || !window.WORKS) return;
+  if (!buttons.length || !grid) return;
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -83,17 +70,13 @@ function setupFilters() {
       button.classList.add("active");
 
       const filter = button.dataset.filter;
-
       const filteredWorks = filter === "all"
         ? window.WORKS
         : window.WORKS.filter((work) => work.series === filter);
 
-      updateSeriesIntro(filter);
       renderWorks("works-grid", filteredWorks);
     });
   });
-
-  updateSeriesIntro("all");
 }
 
 function openWorkDialog(work) {
@@ -108,7 +91,6 @@ function openWorkDialog(work) {
   image.src = work.image || "";
   image.alt = `${work.title || "Untitled"}, ${work.year || ""}`;
   image.style.display = work.image ? "block" : "none";
-
   title.textContent = work.title || "Untitled";
   meta.textContent = workMeta(work);
   note.textContent = work.note || "";
@@ -119,11 +101,9 @@ function openWorkDialog(work) {
 function setupDialog() {
   const dialog = document.getElementById("work-dialog");
   const closeButton = document.querySelector(".dialog-close");
-
   if (!dialog || !closeButton) return;
 
   closeButton.addEventListener("click", () => dialog.close());
-
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) dialog.close();
   });
@@ -132,7 +112,6 @@ function setupDialog() {
 function setupNav() {
   const button = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".site-nav");
-
   if (!button || !nav) return;
 
   button.addEventListener("click", () => {
@@ -148,11 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (window.WORKS) {
     renderWorks("works-grid", window.WORKS);
-    renderWorks(
-      "featured-grid",
-      window.WORKS.filter((work) => work.featured).slice(0, 6)
-    );
-
+    renderWorks("featured-grid", window.WORKS.filter((work) => work.featured).slice(0, 6));
     setupFilters();
     setupDialog();
   }
