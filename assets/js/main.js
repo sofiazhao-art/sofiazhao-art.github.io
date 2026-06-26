@@ -64,15 +64,16 @@ function setupFilters() {
   const grid = document.getElementById("works-grid");
   const introText = document.getElementById("series-intro-text");
 
-  const intro = window.SERIES_INTROS?.[filter] || window.SERIES_INTROS?.all || "";
-introText.textContent = intro;
+  if (!buttons.length || !grid || !window.WORKS) return;
 
   function setSeriesIntro(filter) {
-    if (!introText) return;
-    introText.textContent = seriesIntros[filter] || seriesIntros.all;
-  }
+    if (!introText || !window.SERIES_INTROS) return;
 
-  if (!buttons.length || !grid || !window.WORKS) return;
+    introText.textContent =
+      window.SERIES_INTROS[filter] ||
+      window.SERIES_INTROS.all ||
+      "";
+  }
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
