@@ -65,6 +65,14 @@ function setupFilters() {
 
   if (!buttons.length || !grid || !window.WORKS) return;
 
+  function updateSeriesIntro(filter) {
+    const copies = document.querySelectorAll(".series-copy");
+
+    copies.forEach((copy) => {
+      copy.hidden = copy.dataset.filter !== filter;
+    });
+  }
+
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       buttons.forEach((item) => item.classList.remove("active"));
@@ -76,13 +84,13 @@ function setupFilters() {
         ? window.WORKS
         : window.WORKS.filter((work) => work.series === filter);
 
-      document.querySelectorAll(".series-copy").forEach((copy) => {
-        copy.classList.toggle("active", copy.dataset.filter === filter);
-      });
-
+      updateSeriesIntro(filter);
       renderWorks("works-grid", filteredWorks);
     });
   });
+
+  updateSeriesIntro("all");
+}
 }
 
 function openWorkDialog(work) {

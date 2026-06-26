@@ -379,10 +379,7 @@ code {
   font-size: 17px;
 }
 
-.series-intro p {
-  margin: 0;
-}
-.series-intro {
+..series-intro {
   max-width: 760px;
   margin: -18px 0 42px;
   color: var(--muted);
@@ -390,11 +387,10 @@ code {
 }
 
 .series-copy {
-  display: none;
   margin: 0;
 }
 
-.series-copy.active {
-  display: block;
+.series-copy[hidden] {
+  display: none !important;
 }
 }
