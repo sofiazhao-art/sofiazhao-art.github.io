@@ -62,7 +62,8 @@ function renderWorks(containerId, works) {
 function setupFilters() {
   const buttons = document.querySelectorAll(".filter-button");
   const grid = document.getElementById("works-grid");
-  if (!buttons.length || !grid) return;
+
+  if (!buttons.length || !grid || !window.WORKS) return;
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -70,9 +71,14 @@ function setupFilters() {
       button.classList.add("active");
 
       const filter = button.dataset.filter;
+
       const filteredWorks = filter === "all"
         ? window.WORKS
         : window.WORKS.filter((work) => work.series === filter);
+
+      document.querySelectorAll(".series-copy").forEach((copy) => {
+        copy.classList.toggle("active", copy.dataset.filter === filter);
+      });
 
       renderWorks("works-grid", filteredWorks);
     });

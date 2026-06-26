@@ -382,4 +382,19 @@ code {
 .series-intro p {
   margin: 0;
 }
+.series-intro {
+  max-width: 760px;
+  margin: -18px 0 42px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.series-copy {
+  display: none;
+  margin: 0;
+}
+
+.series-copy.active {
+  display: block;
+}
 }
