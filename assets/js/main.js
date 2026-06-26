@@ -62,7 +62,22 @@ function renderWorks(containerId, works) {
 function setupFilters() {
   const buttons = document.querySelectorAll(".filter-button");
   const grid = document.getElementById("works-grid");
-  if (!buttons.length || !grid) return;
+  const introText = document.getElementById("series-intro-text");
+
+  const seriesIntros = {
+    all: "Selected works across painting, mixed media, and works on paper.",
+    "Third Series": "This series explores bodily fragments, emotional pressure, unstable inner structures, and the tension between figuration and abstraction.",
+    "Venus in the Cave": "This series centers on enclosure, intimacy, bodily space, and the ambiguous relationship between protection, desire, and pressure.",
+    "Cat Room": "This series uses the cat, the room, the chair, and the window as symbolic structures through which vulnerability, interiority, and containment are explored.",
+    Studies: "Studies, experiments, and works on paper that trace the development of form, color, gesture, and visual language."
+  };
+
+  function setSeriesIntro(filter) {
+    if (!introText) return;
+    introText.textContent = seriesIntros[filter] || seriesIntros.all;
+  }
+
+  if (!buttons.length || !grid || !window.WORKS) return;
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -70,13 +85,17 @@ function setupFilters() {
       button.classList.add("active");
 
       const filter = button.dataset.filter;
+
       const filteredWorks = filter === "all"
         ? window.WORKS
         : window.WORKS.filter((work) => work.series === filter);
 
+      setSeriesIntro(filter);
       renderWorks("works-grid", filteredWorks);
     });
   });
+
+  setSeriesIntro("all");
 }
 
 function openWorkDialog(work) {
