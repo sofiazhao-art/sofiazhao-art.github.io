@@ -386,5 +386,5 @@ code {
 }
 
 .series-intro #series-intro-text {
-  white-space: pre-line;
+  white-space: pre-wrap;
 }
