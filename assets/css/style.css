@@ -372,7 +372,9 @@ code {
   .site-header {
     padding: 14px 18px;
   }
-  .series-intro {
+}
+
+.series-intro {
   max-width: 760px;
   margin: -18px 0 42px;
   color: var(--muted);
@@ -385,5 +387,4 @@ code {
 
 .series-intro #series-intro-text {
   white-space: pre-line;
-}
 }
