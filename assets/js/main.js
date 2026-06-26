@@ -62,15 +62,29 @@ function renderWorks(containerId, works) {
 function setupFilters() {
   const buttons = document.querySelectorAll(".filter-button");
   const grid = document.getElementById("works-grid");
+  const introText = document.getElementById("series-intro-text");
 
   if (!buttons.length || !grid || !window.WORKS) return;
 
-  function updateSeriesIntro(filter) {
-    const copies = document.querySelectorAll(".series-copy");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      buttons.forEach((item) => item.classList.remove("active"));
+      button.classList.add("active");
 
-    copies.forEach((copy) => {
-      copy.hidden = copy.dataset.filter !== filter;
+      const filter = button.dataset.filter;
+
+      const filteredWorks = filter === "all"
+        ? window.WORKS
+        : window.WORKS.filter((work) => work.series === filter);
+
+      renderWorks("works-grid", filteredWorks);
+
+      if (introText) {
+        introText.textContent = button.dataset.intro || "";
+      }
     });
+  });
+}
   }
 
   buttons.forEach((button) => {
