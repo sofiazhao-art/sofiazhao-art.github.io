@@ -382,4 +382,8 @@ code {
 .series-intro p {
   margin: 0;
 }
+
+#series-intro-text {
+  white-space: pre-line;
+}
 }
