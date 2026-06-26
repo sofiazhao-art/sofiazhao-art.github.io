@@ -383,7 +383,7 @@ code {
   margin: 0;
 }
 
-#series-intro-text {
+.series-intro #series-intro-text {
   white-space: pre-line;
 }
 }
