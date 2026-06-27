@@ -8,23 +8,53 @@
 */
 window.WORKS = [
   {
-    title: "Untitled",
+    title: "Untitled01",
+    year: "2026",
+    medium: "Oil on canvas",
+    size: "40 × 40 cm",
+    series: "Third Series",
+    image: "assets/works/third-01.jpg",
+    featured: false,
+    note: ""
+  },
+  {
+    title: "Untitled02",
+    year: "2026",
+    medium: "Oil on canvas",
+    size: "60 × 80 cm",
+    series: "Third Series",
+    image: "assets/works/third-02.jpg",
+    featured: false,
+    note: ""
+  },
+  {
+    title: "Untitled03",
+    year: "2026",
+    medium: "Oil on canvas",
+    size: "30 × 40 cm",
+    series: "Third Series",
+    image: "assets/works/third-03.jpg",
+    featured: false,
+    note: ""
+  },
+  {
+    title: "Untitled04",
     year: "2026",
     medium: "Oil on canvas",
     size: "70 × 110 cm",
     series: "Third Series",
-    image: "",
+    image: "assets/works/third-04.jpg",
     featured: true,
     note: ""
   },
   {
-    title: "Untitled",
-    year: "2026",
+    title: "Untitled05",
+    year: "2025-2026",
     medium: "Oil on canvas",
-    size: "60 × 90 cm",
+    size: "70 × 110 cm",
     series: "Third Series",
-    image: "",
-    featured: true,
+    image: "assets/works/third-05.jpg",
+    featured: false,
     note: ""
   },
   {
@@ -78,12 +108,12 @@ window.WORKS = [
     note: ""
   },
   {
-    title: "Untitled 05",
+    title: "Untitled 04",
     year: "2026",
     medium: "Oil on canvas",
     size: "60 × 80 cm",
     series: "Venus in the Cave",
-    image: "assets/works/venus-cave-05.jpg",
+    image: "assets/works/venus-cave-04.jpg",
     featured: false,
     note: ""
   }
