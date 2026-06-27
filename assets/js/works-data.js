@@ -15,7 +15,7 @@ window.WORKS = [
     series: "Third Series",
     image: "",
     featured: true,
-    note: "Replace this note with a short internal or public description."
+    note: ""
   },
   {
     title: "Untitled",
