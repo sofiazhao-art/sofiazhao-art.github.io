@@ -58,22 +58,32 @@ window.WORKS = [
     note: ""
   },
   {
-    title: "Untitled",
-    year: "2025",
+    title: "Untitled01",
+    year: "2026",
     medium: "Acrylic and mixed media on canvas",
-    size: "70 × 70 cm",
-    series: "Cat Room",
-    image: "",
+    size: "30 × 40 cm",
+    series: "Suspended Bodies",
+    image: "assets/works/sb-01.jpg",
+    featured: false,
+    note: ""
+  },
+  {
+    title: "Untitled02",
+    year: "2026",
+    medium: "Acrylic and mixed media on canvas",
+    size: "30 × 40 cm",
+    series: "Suspended Bodies",
+    image: "assets/works/sb-02.jpg",
     featured: true,
     note: ""
   },
   {
-    title: "Study",
+    title: "Untitled03",
     year: "2026",
-    medium: "Oil on paper",
+    medium: "Acrylic and mixed media on canvas",
     size: "30 × 40 cm",
-    series: "Studies",
-    image: "",
+    series: "Suspended Bodies",
+    image: "assets/works/sb-03.jpg",
     featured: false,
     note: ""
   },
