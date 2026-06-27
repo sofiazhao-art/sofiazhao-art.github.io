@@ -69,7 +69,7 @@ function setupFilters() {
   function setSeriesIntro(filter) {
     if (!introText || !window.SERIES_INTROS) return;
 
-    introText.textContent =
+    introText.innerHTML =
       window.SERIES_INTROS[filter] ||
       window.SERIES_INTROS.all ||
       "";
