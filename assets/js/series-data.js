@@ -6,7 +6,7 @@ window.SERIES_INTROS = {
   "This series explores bodily fragments, emotional pressure, unstable inner structures, and the tension between figuration and abstraction.",
 
   "Venus in the Cave": 
-  `In the <em>Venus in the Cave<em>series, what concerns me most is the cave as an ongoing process of intrusion—an environmental experience that is dark, damp, and engulfing. I am interested in exploring how the body is continually rewritten and eroded through this persistent intrusion, entering a state that tends toward disappearance while still refusing to fully withdraw.
+  `In the  *Venus in the Cave* series, what concerns me most is the cave as an ongoing process of intrusion—an environmental experience that is dark, damp, and engulfing. I am interested in exploring how the body is continually rewritten and eroded through this persistent intrusion, entering a state that tends toward disappearance while still refusing to fully withdraw.
 
   I use the name “Venus” precisely because it has long represented an elegant, complete, and recognizable image of femininity within traditional aesthetics. In my paintings, however, the central figures often lack clear faces, defined bodily contours, or a stable sense of beauty. They appear instead as residues, traces, and fragments pressed out by the forces of their surrounding environment.
 
